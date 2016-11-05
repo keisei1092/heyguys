@@ -42,3 +42,7 @@ bower.json
 
 # Ignore Byebug command history file.
 .byebug_history
+
+# こわいので除外
+config/secrets.yml
+config/database.yml
