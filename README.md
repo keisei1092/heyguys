@@ -13,3 +13,8 @@ Usage
 -------------------------------------------
 
 * [Spring permission error Ubuntu 14.04](http://stackoverflow.com/questions/28174437/spring-permission-error-ubuntu-14-04#comment45864524_28174437)
+
+`SECRET_KEY_BASE`の設定忘れ
+---------------------------
+
+* [Rails が production 環境で真っ白、SECRET_KEY_BASE 設定忘れが原因でした](http://easyramble.com/rails-secret-key-base-env.html)
