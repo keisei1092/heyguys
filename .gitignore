@@ -49,3 +49,4 @@ config/database.yml
 
 public/assets
 local_env.yml
+.DS_Store
