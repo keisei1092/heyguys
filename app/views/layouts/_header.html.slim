@@ -52,19 +52,21 @@ nav.navbar.navbar-default
             | Link
         li.dropdown
           a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
-            = image_tag(current_user.image_url, size: "16", alt: current_user.nickname)
+            - if logged_in?
+              = image_tag(current_user.image_url, size: "16", alt: current_user.nickname)
+            - else
+              | ₍˄·͈༝·͈˄₎◞ ̑̑ෆ⃛
             span.caret
           ul.dropdown-menu
             li
-              a[href="#"]
-                | じぶん
-            li
-              a[href="#"]
-                | いじる
-            li
-              a[href="#"]
-                | たすけて
+              - if logged_in?
+                = link_to 'じぶん', '#'
+              - else
+                = link_to 'guyになる', new_user_path
+            / li
+              = link_to 'いじる', setting_path
+            / li
+              = link_to 'なにこれ', help_path
             li.divider[role="separator"]
             li
-              a[href="#"]
-                | じゃあの
+              = link_to 'じゃあの', logout_path
