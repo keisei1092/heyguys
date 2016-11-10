@@ -52,7 +52,7 @@ nav.navbar.navbar-default
             | Link
         li.dropdown
           a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
-            = current_user.nickname
+            = image_tag(current_user.image_url, size: "16", alt: current_user.nickname)
             span.caret
           ul.dropdown-menu
             li
