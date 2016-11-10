@@ -1,4 +1,13 @@
-h1
-  | Welcome#index
-p
-  | Find me in app/views/welcome/index.html.erb
+.list-group
+  - @articles.each do |article|
+    = link_to article, class: "list-group-item" do
+      h4.list-group-item-heading
+        = article.title
+        | &nbsp;
+        small
+          | &#64;
+          = article.user.nickname
+          | &nbsp;&#45;&nbsp;
+          = article.updated_at.strftime('%Y/%m/%d %H:%M')
+      p.list-group-item-text
+        = article.content
