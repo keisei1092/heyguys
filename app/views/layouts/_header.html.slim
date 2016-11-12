@@ -1,71 +1,75 @@
 nav.navbar.navbar-default
   .container-fluid
-    .navbar-header
-      button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"]
-        span.sr-only
-          | Toggle navigation
-        span.icon-bar
-        span.icon-bar
-        span.icon-bar
-      = link_to 'heyguys', root_path, :class => 'navbar-brand'
-    #bs-example-navbar-collapse-1.collapse.navbar-collapse
-      ul.nav.navbar-nav
-        / li.active
-          a[href="#"]
-            | Link
+    .row
+      .col-md-2
+      .col-md-8
+        .navbar-header
+          button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"]
             span.sr-only
-              | (current)
-        / li
-           a[href="#"]
-            | Link
-        / li.dropdown
-          a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
-            | Dropdown
-            span.caret
-          ul.dropdown-menu
-            li
+              | Toggle navigation
+            span.icon-bar
+            span.icon-bar
+            span.icon-bar
+          = link_to 'heyguys', root_path, :class => 'navbar-brand'
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          ul.nav.navbar-nav
+            / li.active
               a[href="#"]
-                | Action
-            li
-              a[href="#"]
-                | Another action
-            li
-              a[href="#"]
-                | Something else here
-            li.divider[role="separator"]
-            li
-              a[href="#"]
-                | Separated link
-            li.divider[role="separator"]
-            li
-              a[href="#"]
-                | One more separated link
-      form.navbar-form.navbar-left
-        .form-group
-          input.form-control[type="text" placeholder="SONAR 落ちる"]
-        button.btn.btn-default[type="submit"]
-          | digる
-      ul.nav.navbar-nav.navbar-right
-        / li
-          a[href="#"]
-            | Link
-        li.dropdown
-          a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
-            - if logged_in?
-              = image_tag(current_user.image_url, size: "16", alt: current_user.nickname)
-            - else
-              | ₍˄·͈༝·͈˄₎◞ ̑̑ෆ⃛
-            span.caret
-          ul.dropdown-menu
-            li
-              - if logged_in?
-                = link_to 'じぶん', user_path(current_user)
-              - else
-                = link_to 'guyになる', 'auth/twitter'
+                | Link
+                span.sr-only
+                  | (current)
             / li
-              = link_to 'いじる', setting_path
+               a[href="#"]
+                | Link
+            / li.dropdown
+              a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
+                | Dropdown
+                span.caret
+              ul.dropdown-menu
+                li
+                  a[href="#"]
+                    | Action
+                li
+                  a[href="#"]
+                    | Another action
+                li
+                  a[href="#"]
+                    | Something else here
+                li.divider[role="separator"]
+                li
+                  a[href="#"]
+                    | Separated link
+                li.divider[role="separator"]
+                li
+                  a[href="#"]
+                    | One more separated link
+          form.navbar-form.navbar-left
+            .form-group
+              input.form-control[type="text" placeholder="SONAR 落ちる"]
+            button.btn.btn-default[type="submit"]
+              | digる
+          ul.nav.navbar-nav.navbar-right
             / li
-              = link_to 'なにこれ', help_path
-            li.divider[role="separator"]
-            li
-              = link_to 'じゃあの', logout_path
+              a[href="#"]
+                | Link
+            li.dropdown
+              a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
+                - if logged_in?
+                  = image_tag(current_user.image_url, size: "16", alt: current_user.nickname)
+                - else
+                  | ₍˄·͈༝·͈˄₎◞ ̑̑ෆ⃛
+                span.caret
+              ul.dropdown-menu
+                li
+                  - if logged_in?
+                    = link_to 'じぶん', user_path(current_user)
+                  - else
+                    = link_to 'guyになる', 'auth/twitter'
+                / li
+                  = link_to 'いじる', setting_path
+                / li
+                  = link_to 'なにこれ', help_path
+                li.divider[role="separator"]
+                li
+                  = link_to 'じゃあの', logout_path
+      .col-md-2

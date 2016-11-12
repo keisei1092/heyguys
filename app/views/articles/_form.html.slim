@@ -1,21 +1,26 @@
-= form_for @article do |f|
-  - if @article.errors.any?
-    #error_explanation
-      h2 = "#{pluralize(@article.errors.count, "error")} prohibited this article from being saved:"
-      ul
-        - @article.errors.full_messages.each do |message|
-          li = message
+.row
+  = form_for @article do |f|
+    - if @article.errors.any?
+      #error_explanation
+        h2 = "#{pluralize(@article.errors.count, "error")} prohibited this article from being saved:"
+        ul
+          - @article.errors.full_messages.each do |message|
+            li = message
 
-  .form-group
-    .field
-      = f.label 'タイトル'
-      = f.text_field :title, class: 'form-control'
-  .form-group
-    .field
-      = f.label '内容'
-      span.help-block
-        | Markdown記法がつかえます
-      = f.text_area :content, class: 'form-control', rows: '15'
-  / .actions = f.submit
-  = f.button :class => 'btn btn-default' do
-    | そうしん
+    .form-group
+      .field
+        = f.label 'タイトル'
+        = f.text_field :title, class: 'form-control'
+    .form-group
+      .field
+        = f.label '内容'
+        span.help-block
+          | Markdown記法がつかえます。
+          br
+          | 行末にスペース2つ入れなくても改行します
+        = f.text_area :content, class: 'form-control', rows: '15'
+    / .actions = f.submit
+    = f.button :class => 'btn btn-default' do
+      | できた
+    | &nbsp;
+    = link_to 'やめる',  article_path(@article), class: 'btn btn-link'

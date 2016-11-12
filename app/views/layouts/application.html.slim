@@ -9,4 +9,8 @@ html
   body
     = render partial: "layouts/header"
     .container
-      = yield
+      .row
+        .col-md-2
+        .col-md-8
+          = yield
+        .col-md-2
