@@ -13,7 +13,9 @@ module ArticlesHelper
     }
 
     extensions = {
-        autolink: true
+        autolink: true,
+        no_intra_emphasis: true,
+        strikethrough: true
         # superscript:        true,
         # disable_indented_code_blocks: true
     }
