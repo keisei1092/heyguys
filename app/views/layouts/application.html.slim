@@ -7,8 +7,9 @@ html
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track' => 'reload'
   body
-    = render partial: "layouts/header"
+    = render partial: 'layouts/header'
     .container
       .row
         .col-md-8.col-md-offset-2
           = yield
+    = render partial: 'layouts/footer'
