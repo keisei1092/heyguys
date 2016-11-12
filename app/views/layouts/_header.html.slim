@@ -1,8 +1,7 @@
 nav.navbar.navbar-default
   .container-fluid
     .row
-      .col-md-2
-      .col-md-8
+      .col-md-8.col-md-offset-2
         .navbar-header
           button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false"]
             span.sr-only
@@ -72,4 +71,3 @@ nav.navbar.navbar-default
                 li.divider[role="separator"]
                 li
                   = link_to 'じゃあの', logout_path
-      .col-md-2
