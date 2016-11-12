@@ -6,10 +6,16 @@
         - @article.errors.full_messages.each do |message|
           li = message
 
-  .field
-    = f.label :title
-    = f.text_field :title
-  .field
-    = f.label :content
-    = f.text_area :content
-  .actions = f.submit
+  .form-group
+    .field
+      = f.label 'タイトル'
+      = f.text_field :title, class: 'form-control'
+  .form-group
+    .field
+      = f.label '内容'
+      span.help-block
+        | Markdown記法がつかえます
+      = f.text_area :content, class: 'form-control', rows: '15'
+  / .actions = f.submit
+  = f.button :class => 'btn btn-default' do
+    | そうしん
