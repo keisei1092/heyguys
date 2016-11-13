@@ -24,3 +24,5 @@ Usage
 
 * [https://dribbble.com/shots/2856044-Pixxecat-Hero-Exploration](https://dribbble.com/shots/2856044-Pixxecat-Hero-Exploration)
 * [https://dribbble.com/shots/2166524-Fashion-store-concept-PSD](https://dribbble.com/shots/2166524-Fashion-store-concept-PSD)
+
+↑英語のサイトのデザインはあてにならんかも。日本のサイトも漁ってみること。
