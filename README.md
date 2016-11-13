@@ -18,3 +18,9 @@ Usage
 ---------------------------
 
 * [Rails が production 環境で真っ白、SECRET_KEY_BASE 設定忘れが原因でした](http://easyramble.com/rails-secret-key-base-env.html)
+
+デザイン参考
+-----------
+
+* [https://dribbble.com/shots/2856044-Pixxecat-Hero-Exploration](https://dribbble.com/shots/2856044-Pixxecat-Hero-Exploration)
+* [https://dribbble.com/shots/2166524-Fashion-store-concept-PSD](https://dribbble.com/shots/2166524-Fashion-store-concept-PSD)
