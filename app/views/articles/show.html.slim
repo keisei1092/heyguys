@@ -3,11 +3,7 @@ p#notice = notice
 = render partial: 'articles/top_author'
 h1
   = @article.title
-  - if @article.user == current_user
-    small
-      | &nbsp;(
-      = link_to 'なおす', edit_article_path(@article)
-      | )
+
 p.row
   = markdown @article.content
 p.row.text-muted.article-author

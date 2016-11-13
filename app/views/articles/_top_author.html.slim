@@ -8,3 +8,7 @@ table
     td.top-author-updated-at.text-muted
       small
         = @article.updated_at.strftime('%Y/%m/%d %H:%M')
+        - if @article.user == current_user
+          | &nbsp;(
+          = link_to 'なおす', edit_article_path(@article)
+          | )
