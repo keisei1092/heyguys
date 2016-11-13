@@ -6,11 +6,6 @@ h1
 
 .row.article-content
   = markdown @article.content
-p.row.text-muted.article-author
-  | by&nbsp;
-  = image_tag(@article.user.image_url, size: "16", alt: current_user.nickname, class: 'img-circle')
-  | &nbsp;
-  = link_to @article.user.nickname, user_path(@article.user)
 
 / link_to 'Edit', edit_article_path(@article)
 / '|
