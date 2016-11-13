@@ -1,5 +1,6 @@
 p#notice = notice
 
+= render partial: 'articles/top_author'
 h1
   = @article.title
   - if @article.user == current_user
@@ -11,7 +12,7 @@ p.row
   = markdown @article.content
 p.row.text-muted.article-author
   | by&nbsp;
-  = image_tag(@article.user.image_url, size: "16", alt: current_user.nickname)
+  = image_tag(@article.user.image_url, size: "16", alt: current_user.nickname, class: 'img-circle')
   | &nbsp;
   = link_to @article.user.nickname, user_path(@article.user)
 
