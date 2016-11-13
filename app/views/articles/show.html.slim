@@ -1,7 +1,8 @@
 p#notice = notice
 
-= render partial: 'articles/top_author'
-h1
+.row
+  = render partial: 'articles/top_author'
+h1.row
   = @article.title
 
 .row.article-content
