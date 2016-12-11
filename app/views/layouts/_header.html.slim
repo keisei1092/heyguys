@@ -49,8 +49,8 @@ nav.navbar.navbar-default
               | digる
           ul.nav.navbar-nav.navbar-right
             li
-              a[href="#"]
-                | Link
+              = link_to new_article_path
+                | 記事をかく
             li.dropdown
               a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
                 - if logged_in?
