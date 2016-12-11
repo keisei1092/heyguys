@@ -55,7 +55,7 @@ nav.navbar.navbar-default
             li.dropdown
               a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
                 - if logged_in?
-                  = image_tag(current_user.image_url, size: "24", alt: current_user.nickname, class: 'img-rounded')
+                  = image_tag(current_user.image_url, size: "24", alt: current_user.nickname, class: 'img-circle')
                 - else
                   | ₍˄·͈༝·͈˄₎◞ ̑̑ෆ⃛
                 span.caret
