@@ -1,11 +1,12 @@
-.list-group
+#home-articles.list-group
   - @articles.each do |article|
     = link_to article, class: "list-group-item" do
       h4.list-group-item-heading
         = article.title
         | &nbsp;
         small
-          | &#64;
+          = image_tag(article.user.image_url, size: "16", alt: article.user.nickname, class: 'img-circle')
+          | &nbsp;
           = article.user.nickname
           | &nbsp;&#45;&nbsp;
           = article.updated_at.strftime('%Y/%m/%d %H:%M')
