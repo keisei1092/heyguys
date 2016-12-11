@@ -1,4 +1,8 @@
-p#notice = notice
+- unless notice.nil?
+  .row
+    #notice.alert.alert-success[role="alert"]
+      a[href="#", class="alert-link"]
+        = notice
 
 .row
   = render partial: 'articles/top_author'
