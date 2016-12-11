@@ -1,7 +1,7 @@
 table
   tr
     td.top-author-icon rowspan=2
-      = image_tag(@article.user.image_url, size: "32", alt: current_user.nickname, class: 'img-circle')
+      = image_tag(@article.user.image_url, size: "32", alt: @article.user.nickname, class: 'img-circle')
     td.top-author-nickname
       | &#64;
       = @article.user.nickname
