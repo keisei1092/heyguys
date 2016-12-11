@@ -48,9 +48,10 @@ nav.navbar.navbar-default
             button.btn.btn-default[type="submit"]
               | digる
           ul.nav.navbar-nav.navbar-right
-            li
-              = link_to new_article_path
-                = fa_icon "edit", text: "記事をかく", class: 'fa-lg'
+            - if logged_in?
+              li
+                = link_to new_article_path
+                  = fa_icon "edit", text: "記事をかく", class: 'fa-lg'
             li.dropdown
               a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"]
                 - if logged_in?
