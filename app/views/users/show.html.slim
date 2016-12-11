@@ -2,7 +2,7 @@ p#notice
   = notice
 .row[style="width: 100%; text-align: center; padding-top: 32px;"]
   p
-    = image_tag(@user.image_url, size: "48", alt: current_user.nickname, class: 'animated infinite bounce img-circle')
+    = image_tag(@user.image_url, size: "48", alt: current_user.nickname, class: 'img-circle')
   h4
     | &#64;
     = @user.nickname
