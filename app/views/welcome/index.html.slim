@@ -1,27 +1,29 @@
 .row
-  .col-md-10
-    .row
-      .jumbotron
-        p DTM知識を共有しよう。
-        p
-          button.btn.btn-default[type="button", onclick="location.href='#{new_article_path}'"]
-            | ノウハウ・Tipsを投稿する
-      #home-articles.list-group
-        - @articles.each do |article|
-          = link_to article, class: "list-group-item" do
-            h4.list-group-item-heading
-              = article.title
+  .col-md-9
+    .jumbotron
+      p DTM知識を共有しよう。
+      p
+        button.btn.btn-default[type="button", onclick="location.href='#{new_article_path}'"]
+          | ノウハウ・Tipsを投稿する
+    #home-articles.list-group
+      - @articles.each do |article|
+        = link_to article, class: "list-group-item" do
+          h4.list-group-item-heading
+            = article.title
+            | &nbsp;
+            small
+              = image_tag(article.user.image_url, size: "16", alt: article.user.nickname, class: 'img-circle')
               | &nbsp;
-              small
-                = image_tag(article.user.image_url, size: "16", alt: article.user.nickname, class: 'img-circle')
-                | &nbsp;
-                = article.user.nickname
-                | &nbsp;&#45;&nbsp;
-                = article.updated_at.strftime('%Y/%m/%d %H:%M')
-            p.list-group-item-text
-              = truncate(article.content, length: 140)
-  .col-md-2
-    .row
-      .panel.panel-default
-        .panel-body
-          | ほげ
+              = article.user.nickname
+              | &nbsp;&#45;&nbsp;
+              = article.updated_at.strftime('%Y/%m/%d %H:%M')
+          p.list-group-item-text
+            = truncate(article.content, length: 140)
+  .col-md-3
+    ul.list-group
+      li.list-group-item
+        | ほげ
+    ul.list-group
+      li.list-group-item フィード一覧
+      li.list-group-item サークル一覧
+      li.list-group-item 人気の投稿
