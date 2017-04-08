@@ -1,9 +1,9 @@
+.jumbotron
+  p DTM知識を共有しよう。
+  p
+    button.btn.btn-default[type="button", onclick="location.href='#{new_article_path}'"]
+      | ノウハウ・Tipsを投稿する
 #home-articles.list-group
-  .jumbotron
-    p DTM知識を共有しよう。
-    p
-      button.btn.btn-default[type="button", onclick="location.href='#{new_article_path}'"]
-        | ノウハウ・Tipsを投稿する
   - @articles.each do |article|
     = link_to article, class: "list-group-item" do
       h4.list-group-item-heading
